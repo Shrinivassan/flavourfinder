@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook.io Login</title>
+    <img src="C:\Users\User\Desktop\Cook.io-main\Cook.io-main" width="30" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="firebaseauth.js"></script>
+    <style>
+        /* Inline CSS for styling based on Figma design */
+    
+        /* General container setup */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f8f8f8;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Left panel for login */
+        .login-panel {
+            width: 400px;
+            padding: 40px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            border-radius: 8px;
+        }
+
+        /* Title and logo */
+        .login-panel h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        .login-panel .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff5722;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        /* Input fields */
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            padding-left: 40px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .input-group i {
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            color: #999;
+        }
+
+        /* Button */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        /* Alternate login options */
+        .alternate-login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .alternate-login p {
+            margin: 0 10px;
+            color: #666;
+        }
+
+        /* Bottom link */
+        .login-panel .bottom-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .login-panel .bottom-link a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+
+        /* Right panel for background image */
+        .right-panel {
+            background-image: url('Image.png'); /* Replace 'Image.png' with the correct path if necessary */
+            background-size: cover;
+            background-position: center;
+            flex-grow: 1;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Left Panel: Login Form -->
+    <div class="login-panel">
+        <div class="logo">
+            <i class="fas fa-utensils"></i> Cook.io
+        </div>
+        <h1>Welcome</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 20px;">Log in to cook.in</p>
+        
+        <!-- Login Form -->
+        <form method="post" action="">
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email address" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <p style="text-align: right;">
+                <a href="#" style="color: #666;">Forgot password?</a>
+            </p>
+            <button class="btn" id="submitSignIn">Continue</button>
+        </form>
+
+        <!-- Alternate Login Options -->
+        <div class="alternate-login">
+            <p>or</p>
+        </div>
+        <button class="btn" style="background-color: #4285F4; color: #fff;">
+            <i class="fab fa-google"></i> Continue with Google
+        </button>
+
+        <!-- Bottom Link -->
+        <div class="bottom-link">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Right Panel: Background Image -->
+    <div class="right-panel"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
